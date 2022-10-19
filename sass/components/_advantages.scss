@@ -1,0 +1,40 @@
+.advantages {
+  padding: 94px 0;
+}
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+}
+.advantages-item {
+  list-style: 0;
+  width: 270px;
+}
+.advantages-card {
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__svg {
+  width: 70px;
+  height: 70px;
+}
+  &__title {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+  &__text {
+  color: $secondary-black-color;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+}

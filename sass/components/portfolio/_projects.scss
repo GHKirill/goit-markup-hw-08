@@ -1,0 +1,62 @@
+.projects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.project {
+  display: inline-block;
+  width: 370px;
+  border: 1px solid $gray-color-photo-border;
+  &:hover,
+&:focus {
+  cursor: default;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+}
+.project-photo__image {
+  display: block;
+}
+.project-photo {
+  position: relative;
+  overflow: hidden;
+}
+.project-photo__description {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  display: flex;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.06em;
+  text-align: left;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: $primary-white-color;
+  @include transition(transform);
+  
+  .project:hover &,
+.project:focus & {
+  transform: translateY(-300px);
+}
+}
+.project-description {
+  padding: 20px 24px;
+  text-align: left;
+  &__name {
+  color: $primary-black-color;
+  font-size: 18px;
+  line-height: calc(26 / 18);
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+&__type {
+  color: $secondary-black-color;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+}
+}
