@@ -1,14 +1,17 @@
-.team {
+@media screen and (max-width: 479px) {
+ .team {
   background-color: $gray-color;
-  padding: 94px 0;
+  padding: 60px 0;
 }
 .team-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
-}
+  flex-direction: column;
+  // justify-content: space-between;
+  gap: 30px;
+} 
 .team-card {
   font-weight: 500;
   font-size: 16px;
@@ -19,8 +22,9 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  &__photo {
+&__photo {
   display: block;
+  // width: 100vw;
 }
 &__info {
   padding: 30px 0;
@@ -32,3 +36,41 @@
   color: $secondary-black-color;
 }
 }
+}
+// .team .section-title {
+//   margin-bottom: 100px;
+// }
+// .team {
+//   background-color: $gray-color;
+//   padding: 94px 0;
+// }
+// .team-list {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .team-card {
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: calc(19 / 16);
+//   text-align: center;
+//   letter-spacing: 0.03em;
+//   background-color: $primary-white-color;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//   border-radius: 0px 0px 4px 4px;
+//   &__photo {
+//   display: block;
+// }
+// &__info {
+//   padding: 30px 0;
+// }
+// &__name {
+//   margin-bottom: 10px;
+// }
+// &__job {
+//   color: $secondary-black-color;
+// }
+// }

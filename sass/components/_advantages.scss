@@ -1,16 +1,18 @@
-.advantages {
-  padding: 94px 0;
+@media screen and (max-width: 479px) {
+  .advantages {
+  padding: 60px 0;
 }
 .advantages-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 .advantages-item {
   list-style: 0;
-  width: 270px;
+  width: 100%;
 }
 .advantages-card {
   height: 120px;
@@ -38,3 +40,15 @@
   letter-spacing: 0.03em;
 }
 }
+}
+
+
+// .advantages {
+//   padding: 94px 0;
+// }
+
+// .advantages-item {
+//   list-style: 0;
+//   width: 270px;
+// }
+
