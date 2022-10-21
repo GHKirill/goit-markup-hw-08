@@ -27,10 +27,11 @@ p {
   clip-path: inset(50%);
   margin: -1px;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 1600px) {
 .container {
   // width: 1200px;
   width: 100%;
+  min-width: 300px;
   padding: 0 15px;
   // padding-right: 15px;
   margin: 0 auto;
@@ -38,6 +39,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   }
   &--flex-baseline {
     text-align: center;
@@ -72,13 +74,17 @@ a {
 .logo {
   color: var(--logo-black-color);
   font-family: $font-raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
+  // font-weight: 700;
+  // font-size: 26px;
+  // line-height: calc(31 / 26);
+   font-weight: 500;
+  font-size: 24px;
+  line-height: calc(33 / 24);
   letter-spacing: 0.03em;
   color: $accent-color;
   padding: 24px 0;
-  margin-right: 93px;
+  // margin-right: 93px;
+// margin-right: calc((100% - 435px)* 0.27 );
   &__accent {
   color: $logo-black-color;
  } 
@@ -92,7 +98,7 @@ a {
 }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 1600px) {
   .section-title {
   font-size: 28px;
   line-height: calc(33 / 28);

@@ -1,4 +1,11 @@
 .header {
+  display: none;
+}
+
+
+@media  screen and(min-width: 480px) {
+  .header {
+    display: block;
   height: 80px;
   display: flex;
   align-items: center;
@@ -10,7 +17,7 @@
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: calc((100vw - 485px)* 0.30 );
   justify-content: left;
 }
 .navigation-list {
@@ -20,9 +27,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: calc((100vw - 485px) * 0.17);
+
+
 &__link {
   color: $primary-black-color;
   font-weight: 500;
+  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   display: block;
@@ -50,27 +61,34 @@
   background-color: $accent-color;
 }
 }
-.navigation-list__item {
-  margin-right: 50px;
-}
+// .navigation-list__item {
+//   margin-right: 50px;
+// }
 .navigation-list__item--accent {
   position: relative;
 }
 /* contacts */
 .contacts-list {
+  padding: 0;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  // justify-content: center;
+  align-items: flex-start;
+  // gap: 50px;
   list-style: none;
   &__link {
   display: flex;
   align-items: center;
   color: $secondary-black-color;
   font-weight: 500;
-  line-height: calc(16 / 14);
+  // line-height: calc(16 / 14);
+  font-size: 12px;
+  line-height: calc(14/12);
   letter-spacing: 0.02em;
-  padding: 32px 0;
+  // padding: 32px 0;
+   padding: 5px 0;
   @include transition();
 }
 &__link:hover,
@@ -88,5 +106,16 @@
 &__svg--smartphone {
   width: 10px;
   height: 16px;
+}
+}
+}
+@media  screen and(min-width: 768px) {
+.contacts-list {
+  flex-direction: row;
+  gap: 10px;
+  &__link {
+  font-size: 14px;
+  line-height: calc(16/14);
+}
 }
 }

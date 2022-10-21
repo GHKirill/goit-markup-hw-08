@@ -1,4 +1,4 @@
-@media screen and (max-width: 479px) {
+
   .advantages {
   padding: 60px 0;
 }
@@ -40,8 +40,19 @@
   letter-spacing: 0.03em;
 }
 }
-}
 
+@media screen and (min-width: 480px) {
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+}
+.advantages-item {
+   flex-basis: calc((100% - 30px) / 2);
+  // flex-basis: 300px;
+}
+}
 
 // .advantages {
 //   padding: 94px 0;
