@@ -241,6 +241,13 @@ a {
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.1666666667;
+    margin-bottom: 60px;
+  }
+}
 .button {
   color: inherit;
   font: inherit;
