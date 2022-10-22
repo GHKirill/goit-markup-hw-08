@@ -1,29 +1,50 @@
 .hero {
+  
+  width: 100vw;
   max-width: 1600px;
   margin: 0 auto;
   background-color: #c4c4c4;
   color: $primary-white-color;
   text-align: center;
-  height: 600px;
-  padding: 200px 0;
+  // height: 400px;
+  padding: 118px 0;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
 .section-title--hero {
   font-weight: 900;
-  font-size: 44px;
-  line-height: calc(60 / 44);
+  font-size: 26px;
+  line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
+  // width: 696px;
+  padding: 0 20px;
+  text-align: center;
   margin: 0 auto 30px auto;
+  @media  screen and (min-width: 768px) {
+    & {
+      padding: 0;
+      width: 360px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+     font-size: 44px;
+  line-height: calc(60 / 44);
+  width: 696px;
+  }
 }
 .button--hero {
-  min-width: 216px;
+  min-width: 200px;
   @include transition(background-color);
+  @media screen and (min-width: 1200px) {
+   min-width: 216px;
+  }
   &:hover,
   &:focus {
   background-color: $accent-color-main-button;

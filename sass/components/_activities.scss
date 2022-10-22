@@ -1,17 +1,25 @@
 .activities {
   padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .activities-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+
   display: flex;
+  gap: 30px;
   justify-content: space-between;
 }
 .activities-item {
   position: relative;
   &__image {
   display: block;
+  width: 100%;
+  max-width: 370px;
+  height: auto;
 }
   &__description {
   text-transform: uppercase;
@@ -31,6 +39,7 @@
   align-items: center;
   background-color: rgba(47, 48, 58, 0.8);
   height: 70px;
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
 }
 }
