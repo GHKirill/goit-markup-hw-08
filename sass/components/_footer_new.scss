@@ -1,7 +1,8 @@
-@media screen and (max-width:1600px) {
+
 .footer {
   background-color: $secondary-back-ground-color;
   padding: 60px 0;
+  text-align: center;
 }
 .footer-overlay {
   display: flex;
@@ -56,7 +57,7 @@
 .footer-sign-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   // margin: 0 5px 5px -5px;
 
   &__proposal {
@@ -66,7 +67,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   vertical-align: text-bottom;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 &__input {
   width: 100%;
@@ -91,18 +92,59 @@
   color: $primary-white-color;
   margin-left: 0 auto;
 }
-}
+
 
 
 @media screen and (min-width:480px) {
 .footer-overlay {
   flex-direction: row;
   justify-content: space-around;
+  align-items: baseline;
 }
 .footer-sign-info {
   &__input {
     width: 450px;
     margin: auto;
+    margin-bottom: 20px;
+  }
+  &__proposal {
+    margin-bottom: 20px;
   }
 }
 }
+@media screen and (min-width: 1200px) {
+  .footer-overlay {
+    margin: 0;
+  }
+    .container--flex-baseline {
+  display: flex;
+  // gap: 85px;
+  align-items: baseline;
+  justify-content: space-between;
+    }
+    .footer-overlay {
+gap: 65px;
+}
+.footer-sign {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 0;
+ width: 570px;
+ justify-content: space-between;
+  &-info {
+    margin: 0;
+    
+  }
+  &-info__input {
+  margin: 0;
+  width: 358px;
+}
+}
+.button--signing {
+  margin-top: auto;
+  max-width: 200px;
+}
+
+}
+
