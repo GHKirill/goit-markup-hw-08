@@ -1,5 +1,6 @@
 .activities {
   padding-bottom: 94px;
+  display: none;
 }
 .activities-list {
   list-style: none;
@@ -33,4 +34,20 @@
   height: 70px;
   width: 370px;
 }
+}
+@media screen and(min-width: 768px) {
+  .activities {
+    display: block;
+  }
+  .activities-item {
+    width: calc((100% - 60px) / 3);
+  }
+  .activities-item__background {
+    width: 100%;
+    height: calc(100% * (70 / 294));
+  }
+  .activities-item__image {
+    width: 100%;
+    height: auto;
+  }
 }
