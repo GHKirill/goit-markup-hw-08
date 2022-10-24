@@ -1,6 +1,10 @@
 .header {
   // position: relative;
-  padding: 10px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 10px 0;
+  }
+
+  height: 80px;
   &--portfolio {
     border-bottom: $gray-color-header-border;
   }
@@ -14,7 +18,7 @@
   }
 }
 .menu-button {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   z-index: 10;
@@ -24,6 +28,9 @@
   background-color: transparent;
   justify-content: center;
   align-items: center;
+  &.is-open {
+    position: fixed;
+  }
   @media screen and (min-width: 767px) {
     display: none;
   }
@@ -69,6 +76,13 @@
   }
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
+    gap: 96px;
+  }
+  @media screen and (min-width: 1199px) {
+    display: flex;
+    align-items: center;
+    gap: 315px;
   }
 }
 
@@ -100,46 +114,111 @@
   }
 }
 .navigation-list {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
   list-style: none;
   padding: 0;
   margin: 0;
+  &__link {
+    color: $primary-black-color;
+    font-weight: 500;
+    font-size: 14;
+    line-height: calc(16 / 14);
+    padding: 32px 0;
+    @include transition();
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+    cursor: pointer;
+  }
+  &__link--main-page {
+    color: $accent-color;
+  }
+  @media screen and (min-width: 768px) {
+    &__item--accent {
+      position: relative;
+    }
+    &__link--main-page::before {
+      position: absolute;
+      bottom: -32px;
+      left: -1px;
+      content: '';
+      display: inline-block;
+      width: calc(100% + 2px);
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+    }
+  }
+
   @media screen and (max-width: 767px) {
-    display: flex;
     flex-direction: column;
     gap: 32px;
     &__link {
-      color: $primary-black-color;
       font-weight: 500;
       font-size: 40px;
       line-height: calc(47 / 40);
       padding: 0;
-      @include transition();
-    }
-    &__link:hover,
-    &__link:focus {
-      color: $accent-color;
-      cursor: pointer;
-    }
-    &__link--main-page {
-      color: $accent-color;
     }
   }
   @media screen and (max-height: 450px) {
     gap: 20px;
   }
 }
+.container-header {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .contacts-list {
   list-style: none;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 64px;
-  @media screen and (max-height: 450px) {
-    margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @media screen and (min-width: 768px) {
+    gap: 0;
+    margin: 0;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $secondary-black-color;
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    padding: 5px 0;
+    @include transition();
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+    cursor: pointer;
+  }
+  &__svg {
+    display: flex;
+    width: 16px;
+    height: 12px;
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  &__svg--smartphone {
+    width: 10px;
+    height: 16px;
   }
   @media screen and (max-width: 767px) {
-    display: flex;
     flex-direction: column-reverse;
     gap: calc(100vh * (32 / 796));
+    padding: 0;
+    margin-bottom: 64px;
+    @media screen and (max-height: 450px) {
+      margin-bottom: 32px;
+    }
     &__link {
       color: $secondary-black-color;
       font-weight: 500;
@@ -164,6 +243,13 @@
       @media screen and (max-width: 350px) {
         font-size: 32px;
       }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 30px;
+    &__link {
+      padding: 32px 0;
     }
   }
 }

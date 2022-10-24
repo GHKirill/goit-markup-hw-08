@@ -1,60 +1,76 @@
 .navigation-list__link--portfolio-page {
   color: $accent-color;
 }
-.navigation-list__link--portfolio-page::before {
-  position: absolute;
-  bottom: 0;
-  left: -1px;
-  content: '';
-  display: inline-block;
-  width: 78px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: $accent-color;
-}
+// .navigation-list__link--portfolio-page::before {
+//   position: absolute;
+//   bottom: 0;
+//   left: -1px;
+//   content: '';
+//   display: inline-block;
+//   width: 78px;
+//   height: 4px;
+//   border-radius: 2px;
+//   background-color: $accent-color;
+// }
 .section-title--hidden {
   @extend %visually-hidden;
 }
 .work-examples {
   text-align: center;
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 
   &__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-bottom: 56px;
-}
-&__button {
-  color: $primary-black-color;
-  background-color: $gray-color;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  text-align: center;
-  letter-spacing: 0.03em;
-  border: 0 solid transparent;
-  padding: 6px 25px;
-  display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 8px;
+    row-gap: 15px;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+      flex-wrap: nowrap;
+      max-width: 100%;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+  }
+  &__button {
+    color: $primary-black-color;
+    background-color: $gray-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+    border: 0 solid transparent;
+    padding: 6px 25px;
+    display: inline-block;
     @include transition(background-color, box-shadow);
-}
-&__button:hover,
-&__button:focus {
-  color: $primary-white-color;
-  background-color: $accent-color;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  cursor: pointer;
-}
-&__button--active {
-  color: $primary-white-color;
-  background-color: $accent-color;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
+  }
+  &__button:hover,
+  &__button:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__button--active {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
 }
