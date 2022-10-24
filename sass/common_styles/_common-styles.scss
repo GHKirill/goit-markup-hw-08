@@ -4,6 +4,9 @@ body {
   background-color: $primary-white-color;
   font-family: $font-roboto;
   font-size: 14px;
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 .list {
   list-style: none;
@@ -31,7 +34,7 @@ p {
 .container {
   // width: 1200px;
   padding: 0 15px;
-  // width: 100%;
+  width: 100%;
   min-width: 320px;
   margin: 0 auto;
   &--flex {
@@ -66,9 +69,16 @@ a {
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+  @media screen and (max-width: 767px) {
+    & {
+      font-size: 24px;
+      line-height: calc(28 / 24);
+      margin-right: auto;
+    }
+  }
   letter-spacing: 0.03em;
   color: $accent-color;
-  padding: 24px 0;
+  // padding: 24px 0;
   margin-right: 93px;
   &__accent {
     color: $logo-black-color;

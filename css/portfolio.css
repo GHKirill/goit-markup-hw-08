@@ -160,6 +160,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .list {
   list-style: none;
@@ -190,6 +193,7 @@ p {
 
 .container {
   padding: 0 15px;
+  width: 100%;
   min-width: 320px;
   margin: 0 auto;
 }
@@ -228,8 +232,14 @@ a {
   line-height: 1.1923076923;
   letter-spacing: 0.03em;
   color: #2196f3;
-  padding: 24px 0;
   margin-right: 93px;
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    font-size: 24px;
+    line-height: 1.1666666667;
+    margin-right: auto;
+  }
 }
 .logo__accent {
   color: #000000;
@@ -323,6 +333,7 @@ a {
 }
 
 .header {
+  position: relative;
   height: 80px;
   display: flex;
   align-items: center;
@@ -416,6 +427,40 @@ a {
 .contacts-list__svg--smartphone {
   width: 10px;
   height: 16px;
+}
+
+.header-button {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+}
+
+.header-button .header-button__close {
+  display: none;
+}
+
+.header-button.is-open .header-button__close {
+  display: block;
+}
+
+.header-button.is-open .header-button__menu {
+  display: none;
+}
+
+.header__mobile-menu {
+  display: none;
+  position: absolute;
+  overflow-y: scroll;
+  width: 100%;
+  height: 500px;
+  left: 0;
+  top: 100%;
+  background-color: beige;
+  padding: 20px;
+}
+
+.header__mobile-menu.is-open {
+  display: block;
 }
 
 .hero {
