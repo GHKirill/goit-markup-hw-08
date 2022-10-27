@@ -20,7 +20,7 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient (rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-background/Header-img@2x.jpg);
   }
 }
@@ -28,7 +28,7 @@
   screen and (min-resolution: 288dpi),
   screen and (min-resolution: 3dppx) {
   .hero {
-    background-image: linear-gradient (rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-background/Header-img@3x.jpg);
   }
 }

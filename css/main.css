@@ -650,12 +650,12 @@ a {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), url(../images/hero-background/Header-img@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background/Header-img@2x.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
   .hero {
-    background-image: linear-gradient rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), url(../images/hero-background/Header-img@3x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background/Header-img@3x.jpg);
   }
 }
 .section-title--hero {
@@ -909,7 +909,8 @@ a {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  row-gap: 30px;
+  justify-content: space-between;
 }
 @media screen and (min-width: 1200px) {
   .clients-list {
@@ -918,16 +919,19 @@ a {
 }
 
 .clients-item {
-  margin: 0 auto;
+  margin: 0;
+  width: calc((100vw - 60px) / 2);
+  max-width: 210px;
+  min-width: 106px;
+  height: calc((100vw - 60px) / 2 / 210 * 92);
+  max-height: 92px;
+  min-height: 60px;
 }
 .clients-item__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc((100vw - 60px) / 2);
-  max-width: 210px;
-  height: calc((100vw - 60px) / 2 / 210 * 92);
-  max-height: 92px;
+  height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
@@ -939,6 +943,7 @@ a {
     width: calc((100vw - 90px) / 3);
     max-width: 210px;
     height: calc((100vw - 90px) / 3 / 210 * 92);
+    max-height: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
