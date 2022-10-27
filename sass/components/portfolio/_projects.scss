@@ -36,6 +36,8 @@
 .project-photo__image {
   display: inline-block;
   width: 100%;
+  height: auto;
+  max-height: 294px;
   object-fit: cover;
   @media screen and (min-width: 768px) {
     width: 354px;
@@ -56,31 +58,80 @@
   @media screen and (min-width: 1200px) {
     max-width: 370px;
   }
-}
-.project-photo__description {
-  position: absolute;
-  top: 300px;
-  left: 0;
-  display: flex;
-  padding: 77px 24px;
-  font-size: 18px;
-  line-height: calc(28 / 18);
-  letter-spacing: 0.06em;
-  text-align: left;
-  background-color: rgba(33, 150, 243, 0.9);
-  color: $primary-white-color;
-  @include transition(transform);
-  @media screen and (max-width: 350px) {
-    padding: 42px 24px;
-  }
+  &__description {
+    position: absolute;
+    display: block;
+    // $height: calc(100% * 294 / 370);
+    // $height: calc(100% * 0.7946);
+    $height: 100%;
+    // $height: 400px;
+    // top: 360px;
+    height: $height;
+    top: $height;
+    // left: 0;
+    // display: flex;
+    padding: 77px 24px 77px 24px;
 
-  .project:hover &,
-  .project:focus & {
-    transform: translateY(-300px);
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    @media screen and (max-width: 384px) {
+      font-size: calc((100vw - 30px) / 354 * 18);
+      padding-top: calc((100vw - 30px) / 354 * 77);
+      padding-bottom: calc((100vw - 30px) / 354 * 77);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      line-height: calc(28 / 18);
+      padding: 49px 24px 77px 24px;
+    }
+
+    letter-spacing: 0.06em;
+    text-align: left;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: $primary-white-color;
+    @include transition(transform);
+    @media screen and (max-width: 360px) {
+      padding: 42px 24px;
+    }
+
+    .project:hover &,
+    .project:focus & {
+      // transform: translateY(-360px);
+      transform: translateY(-$height);
+    }
   }
 }
+// .project-photo__description {
+//   $width: 100%;
+//   $height: calc($width / 370 * 294);
+//   height: $height;
+//   position: absolute;
+//   // top: 360px;
+//   top: $height;
+//   left: 0;
+//   display: flex;
+//   padding: 77px 24px;
+
+//   font-size: 18px;
+//   line-height: calc(28 / 18);
+//   letter-spacing: 0.06em;
+//   text-align: left;
+//   background-color: rgba(33, 150, 243, 0.9);
+//   color: $primary-white-color;
+//   @include transition(transform);
+//   @media screen and (max-width: 360px) {
+//     padding: 42px 24px;
+//   }
+
+//   .project:hover &,
+//   .project:focus & {
+//     // transform: translateY(-360px);
+//     transform: translateY(-$height);
+//   }
+// }
 .project-description {
-  // max-width: 354px;
+  max-width: 354px;
   padding: 20px 24px;
   text-align: left;
   &__name {

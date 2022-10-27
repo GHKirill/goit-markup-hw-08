@@ -871,6 +871,8 @@ a {
 .project-photo__image {
   display: inline-block;
   width: 100%;
+  height: auto;
+  max-height: 294px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -902,13 +904,12 @@ a {
     max-width: 370px;
   }
 }
-
 .project-photo__description {
   position: absolute;
-  top: 300px;
-  left: 0;
-  display: flex;
-  padding: 77px 24px;
+  display: block;
+  height: 100%;
+  top: 100%;
+  padding: 77px 24px 77px 24px;
   font-size: 18px;
   line-height: 1.5555555556;
   letter-spacing: 0.06em;
@@ -917,16 +918,31 @@ a {
   color: #ffffff;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 384px) {
+  .project-photo__description {
+    font-size: calc((100vw - 30px) / 354 * 18);
+    padding-top: calc((100vw - 30px) / 354 * 77);
+    padding-bottom: calc((100vw - 30px) / 354 * 77);
+  }
+}
+@media screen and (min-width: 768px) {
+  .project-photo__description {
+    font-size: 18px;
+    line-height: 1.5555555556;
+    padding: 49px 24px 77px 24px;
+  }
+}
+@media screen and (max-width: 360px) {
   .project-photo__description {
     padding: 42px 24px;
   }
 }
 .project:hover .project-photo__description, .project:focus .project-photo__description {
-  transform: translateY(-300px);
+  transform: translateY(-100%);
 }
 
 .project-description {
+  max-width: 354px;
   padding: 20px 24px;
   text-align: left;
 }
