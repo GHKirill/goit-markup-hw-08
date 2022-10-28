@@ -20,7 +20,7 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient (rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-background/Header-img@2x.jpg);
   }
 }
@@ -28,7 +28,7 @@
   screen and (min-resolution: 288dpi),
   screen and (min-resolution: 3dppx) {
   .hero {
-    background-image: linear-gradient (rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-background/Header-img@3x.jpg);
   }
 }
@@ -38,7 +38,6 @@
   line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  // width: 696px;
   padding: 0 20px;
   text-align: center;
   margin: 0 auto 30px auto;
@@ -63,9 +62,5 @@
   &:hover,
   &:focus {
     background-color: $accent-color-main-button;
-  }
-  &:hover,
-  &:focus {
-    cursor: pointer;
   }
 }

@@ -69,24 +69,35 @@
     $padding-width: calc(100vw / 480 * 40);
     $padding-height: calc(100vh / 796 * 40);
     padding: $padding-height $padding-width;
+
     @media screen and (min-width: 480px) and (min-height: 480px) {
       padding: 40px 40px;
     }
     &.is-open {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: block;
+      .menu-container-overlay {
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        margin: 0 auto;
+        height: 100%;
+        justify-content: space-between;
+      }
     }
   }
   @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    gap: 96px;
+    .menu-container-overlay {
+      display: flex;
+      align-items: center;
+      gap: 96px;
+    }
   }
   @media screen and (min-width: 1199px) {
-    display: flex;
-    align-items: center;
-    gap: 315px;
+    .menu-container-overlay {
+      // display: flex;
+      // align-items: center;
+      gap: 96px;
+    }
   }
 }
 

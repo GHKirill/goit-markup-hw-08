@@ -49,15 +49,16 @@
 }
 
 .footer-sign {
-  // display: flex;
-  // align-items: flex-end;
   margin: 0 auto;
 }
 .footer-sign-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5px;
-  // margin: 0 5px 5px -5px;
+  row-gap: 35px;
+  margin-bottom: 20px;
+  &__label {
+    display: none;
+  }
 
   &__proposal {
     color: $primary-white-color;
@@ -66,7 +67,6 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     vertical-align: text-bottom;
-    margin-bottom: 35px;
   }
   &__input {
     width: 100%;
@@ -91,7 +91,6 @@
   color: $primary-white-color;
   margin-left: 0 auto;
 }
-
 @media screen and (min-width: 768px) {
   .footer-overlay {
     flex-direction: row;
@@ -102,14 +101,13 @@
     &__input {
       width: 450px;
       margin: auto;
-      margin-bottom: 20px;
-    }
-    &__proposal {
-      margin-bottom: 20px;
     }
   }
 }
 @media screen and (min-width: 1200px) {
+  .footer {
+    text-align: left;
+  }
   .footer-overlay {
     margin: 0;
   }
