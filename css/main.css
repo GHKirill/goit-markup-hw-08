@@ -351,12 +351,15 @@ a {
   }
 }
 
+.container-header {
+  position: relative;
+}
+
 .menu-button {
   position: absolute;
-  top: 10px;
+  display: inline-flex;
   right: 10px;
   z-index: 10;
-  display: inline-flex;
   border: none;
   padding: 0;
   background-color: transparent;
@@ -429,19 +432,19 @@ a {
     justify-content: space-between;
   }
 }
+
 @media screen and (min-width: 768px) {
-  .menu-container .menu-container-overlay {
+  .menu-container-overlay {
     display: flex;
     align-items: center;
-    gap: 96px;
+    gap: 106px;
   }
 }
-@media screen and (min-width: 1199px) {
-  .menu-container .menu-container-overlay {
+@media screen and (min-width: 1200px) {
+  .menu-container-overlay {
     gap: 315px;
   }
 }
-
 .header-social {
   display: none;
 }
