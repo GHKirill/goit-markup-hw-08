@@ -438,7 +438,7 @@ a {
 }
 @media screen and (min-width: 1199px) {
   .menu-container .menu-container-overlay {
-    gap: 96px;
+    gap: 315px;
   }
 }
 
@@ -1078,7 +1078,7 @@ a {
 .footer-sign-info {
   display: flex;
   flex-direction: column;
-  row-gap: 35px;
+  row-gap: 20px;
   margin-bottom: 20px;
 }
 .footer-sign-info__proposal {

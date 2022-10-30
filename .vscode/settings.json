@@ -15,5 +15,5 @@
   "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.autoprefix": ["defaults"],
   "liveSassCompile.settings.watchOnLaunch": true,
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5502
 }
